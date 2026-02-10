@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Wilson</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style1.css" />
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+ <style>
+/* --- General Reset & Fonts --- */
+body {
+    background-color: #ffffff;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+/* --- Hero Section 1 (Top Banner) --- */
+.hero-section1 .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px 15px;
+    max-width: 1400px;
+}
+
+.sports1, .sports2 {
+    position: relative;
+    flex: 1 1 100%; /* Mobile par full width */
+}
+
+@media (min-width: 768px) {
+    .sports1 { flex: 1; }
+    .sports2 { flex: 1.8; }
+}
+
+.sports2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+    color: white;
+}
+
+.overlay-text h1 { font-size: clamp(2rem, 8vw, 4.5rem); font-weight: 900; margin: 0; font-style: italic; }
+.overlay-text h2 { font-size: clamp(0.9rem, 2vw, 1.4rem); font-weight: 600; line-height: 1.2; margin: 10px 0; }
+.overlay-text a { text-decoration: none; color: white; border-bottom: 2px solid #fff; }
+
+/* --- Three Cards Section (Explore Now) --- */
+.container-cards {
+    max-width: 1300px;
+    margin: 40px auto;
+    padding: 0 15px !important; /* Fixed padding fixed for mobile */
+    height: auto !important; /* Fixed height remove kar di */
+}
+
+.card-card {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.card-card img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.card-card .btn {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    color: #000;
+    border-radius: 0;
+    font-weight: 800;
+    padding: 12px 25px;
+    border: none;
+    white-space: nowrap;
+}
+
+/* --- Tennis Header --- */
+.tennis {
+    text-align: center;
+    padding: 60px 20px;
+    max-width: 900px;
+}
+
+.tennis h1 { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 800; text-transform: uppercase; font-style: italic; }
+.tennis h2 { font-size: 1.1rem; color: #444; line-height: 1.6; }
+
+/* --- Circular Category Icons --- */
+.sports-items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px 0;
+}
+
+.sports-items div {
+    flex: 0 0 calc(25% - 20px); /* Mobile par 4 icons ek line mein */
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .sports-items div { flex: 0 0 auto; width: 120px; }
+}
+
+.sports-items img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: #f4f4f4;
+    padding: 12px;
+    object-fit: contain;
+}
+
+.sports-items p { font-size: 0.8rem; font-weight: 700; margin-top: 8px; text-transform: uppercase; }
+
+/* --- Product Cards (The 8 Cards) --- */
+.container-4 {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.card {
+    border: none !important;
+    background-color: #f9f9f9 !important;
+    border-radius: 0 !important;
+}
+
+.card-img-top {
+    background-color: #fff;
+    padding: 25px;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+}
+
+.card-body {
+    padding: 15px 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-title {
+    font-size: 1rem;
+    font-weight: 800;
+    font-style: italic;
+    text-transform: uppercase;
+    min-height: 45px;
+}
+
+.card-text {
+    font-size: 0.85rem;
+    color: #666;
+    height: 50px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.cart-btn {
+    width: 100%;
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.cart-btn:hover { background: #333; }
+
+/* --- Responsive Helpers --- */
+@media (max-width: 576px) {
+    .container-cards { margin-left: 0 !important; } /* Fixed margin remove kiya */
+    .card-title { font-size: 0.9rem; }
+    .card-text { display: none; } /* Mobile par saaf dikhne ke liye description hide */
+}
+
+/* --- Global Navbar Styling --- */
+.site-header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.announcement-bar {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 8px 0;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 15px 20px;
+}
+
+.logo-box img {
+    height: 40px; /* Logo size adjust karein */
+}
+
+/* --- Nav Links (Desktop) --- */
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.nav-links li {
+    position: relative;
+    padding: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.nav-links a:hover, .active-link {
+    color: #ff0000; /* Wilson Red color ya black rakhein */
+}
+
+/* --- Dropdown (Desktop) --- */
+.sub-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    min-width: 180px;
+    display: none;
+    list-style: none;
+    padding: 10px 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.has-dropdown:hover .sub-menu {
+    display: block;
+}
+
+.sub-menu li {
+    padding: 8px 20px;
+}
+
+/* --- Icons --- */
+.desktop-icons a, .mobile-icons a {
+    color: #000;
+    font-size: 18px;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+.mobile-icons { display: none; }
+
+/* --- Burger Menu (Hidden by default) --- */
+.nav-toggle { display: none; }
+.burger-menu {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.burger-menu span {
+    width: 25px;
+    height: 3px;
+    background: #000;
+    transition: 0.3s;
+}
+
+/* --- RESPONSIVE LOGIC (Mobile & Tablet) --- */
+@media (max-width: 992px) {
+    .burger-menu { display: flex; order: 2; }
+    .logo-box { order: 1; }
+    .desktop-icons { display: none; }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: -100%; /* Bahar rahegi menu */
+        width: 100%;
+        height: 100vh;
+        background: #fff;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 40px 20px;
+        transition: 0.4s ease-in-out;
+        z-index: 999;
+    }
+
+    .nav-links li {
+        width: 100%;
+        padding: 15px 0;
+        border-bottom: 1px solid #eee;
+    }
+
+    /* Show menu when checkbox is clicked */
+    .nav-toggle:checked ~ .nav-links {
+        left: 0;
+    }
+
+    /* Burger to 'X' animation */
+    .nav-toggle:checked ~ .burger-menu span:nth-child(1) { transform: rotate(45deg) translate(5px, 6px); }
+    .nav-toggle:checked ~ .burger-menu span:nth-child(2) { opacity: 0; }
+    .nav-toggle:checked ~ .burger-menu span:nth-child(3) { transform: rotate(-45deg) translate(5px, -7px); }
+
+    .mobile-icons {
+        display: flex;
+        margin-top: 20px;
+    }
+
+    .sub-menu {
+        position: static;
+        box-shadow: none;
+        padding-left: 20px;
+        display: block; /* Mobile par dropdown open dikhega ya click par kar sakte hain */
+    }
+}
+
+/* --- General Reset & Fonts --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, sans-serif;
+}
+
+body { background-color: #fff; color: #000; }
+
+
+/* --- 1. Contact Hero Section --- */
+.contact-hero {
+    position: relative;
+    width: 100%;
+    /* Desktop/Laptop par screen ka 60% hissa cover karega */
+    height: 60vh; 
+    min-height: 300px; /* Isse chota kabhi nahi hoga */
+    max-height: 600px; /* Isse bada kabhi nahi hoga */
+    overflow: hidden;
+}
+
+/* Image ko full container mein fit karne ke liye */
+.container-contact {
+    width: 100%;
+    height: 100%;
+}
+
+.container-contact img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Yeh image ko stretch nahi hone dega */
+    object-position: center; /* Image ka center hamesha nazar aayega */
+    filter: brightness(0.6); 
+    display: block;
+}
+
+.container-contact h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    /* Font size responsive hai */
+    font-size: clamp(1.5rem, 6vw, 4rem); 
+    font-weight: 900;
+    text-transform: uppercase;
+    font-style: italic;
+    text-align: center;
+    width: 90%;
+    line-height: 1.1;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5); /* Text ko mazeed saaf karne ke liye */
+}
+
+/* --- Responsive Adjustments --- */
+
+/* Tablets (iPad etc) */
+@media (max-width: 1024px) {
+    .contact-hero {
+        height: 50vh;
+    }
+}
+
+/* Mobile Phones */
+@media (max-width: 768px) {
+    .contact-hero {
+        height: 40vh; /* Mobile par height thodi kam taake content upar aaye */
+    }
+    .container-contact h1 {
+        font-size: 1.8rem; /* Mobile par headings balance rakhein */
+    }
+}
+
+
+/* --- 2. Update Section --- */
+.update-section {
+    background-color: #f4f4f4;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.container-update {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.container-update h1 {
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: #ff0000; /* Alert color */
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.container-update p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #444;
+}
+
+/* --- 3. Quick Links (4 Icons) --- */
+.quick-links {
+    padding: 60px 20px;
+}
+
+.container-icons {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.icon-card {
+    padding: 20px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.icon-card:hover { transform: translateY(-5px); }
+
+.icon-card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+    object-fit: contain;
+}
+
+.icon-card h1 {
+    font-size: 1.1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+/* --- 4. Help Channels (Chat, Email, Call) --- */
+.help-channels {
+    padding: 60px 20px;
+    background-color: #fff;
+}
+
+.container-help {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.container-help h1 {
+    font-size: 2rem;
+    font-weight: 900;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+.container-help-center {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.help-card {
+    border: 1px solid #eee;
+    padding: 40px 20px;
+    text-align: center;
+    background: #f9f9f9;
+}
+
+.help-card img {
+    width: 50px;
+    margin-bottom: 20px;
+}
+
+.help-card h1 {
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.help-card p {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+/* --- RESPONSIVE ADJUSTMENTS --- */
+
+@media (max-width: 768px) {
+    .contact-hero { height: 250px; } /* Mobile par chota banner */
+    
+    .container-icons {
+        grid-template-columns: repeat(2, 1fr); /* Mobile par 2 icons ek line mein */
+        gap: 15px;
+    }
+    
+    .container-help-center {
+        grid-template-columns: 1fr; /* Help cards stacked vertically */
+    }
+
+    .icon-card h1 { font-size: 0.9rem; }
+}
+
+@media (max-width: 480px) {
+    .container-icons {
+        grid-template-columns: 1fr; /* Chote phones par 1 icon per line */
+    }
+}
+ /* footer */
+   .custom-footer {
+  background: #0d0d0d;
+  color: #ccc;
+  padding: 40px 20px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 30px;
+}
+
+.footer-section {
+  min-width: 180px;
+  flex: 1;
+}
+
+.footer-section h4 {
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #bbb;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #fff;
+  transform: translateX(4px);
+}
+
+.help-section input {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px 10px;
+  border: none;
+  background: #1a1a1a;
+  color: #fff;
+  border-radius: 4px;
+}
+
+
+.footer-bottom-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  margin-top: 25px;
+  padding: 20px;
+  background-color: #111; 
+  color: #aaa;
+}
+
+.footer-links-wrapper {
+  text-align: center;
+  flex: 1;
+}
+
+.footer-links {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #aaa;
+  margin: 0 8px;
+  font-size: 13px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+.footer-links-wrapper p {
+  font-size: 13px;
+  margin: 0;
+  color: #999;
+}
+
+.footer-social {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.footer-social i {
+  color: #bbb;
+  font-size: 18px;
+  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.footer-social i:hover {
+  color: #fff;
+  transform: scale(1.3);
+}
+
+
+
+         /* media query */
+         
+
+    @media (max-width: 768px) {
+  .video-content h1 {
+    font-size: 1.5rem;
+  }}
+
+  .shop-btn {
+    width: 90%;
+  }
+
+  .category-card {
+    max-width: 100%;
+  }
+
+  .about-img,
+  .sport-img,
+  .wilson-section {
+    flex-direction: column;
+  }
+
+ 
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column;
+  }
+
+  .footer-bottom-bar {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .footer-links {
+    margin-bottom: 10px;
+  }
+}
+
+  .new-cards-img img {
+    width: 70px;
+  }
+
+
+  /* Responsive: Stack for smaller screens */
+@media (max-width: 768px) {
+  .footer-bottom-bar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-social {
+    margin-top: 15px;
+    justify-content: center;
+  }
+}
+
+    /* Responsive Fix for Small Screens */
+    @media (max-width: 600px) {
+      .new-cards-img img {
+        width: 120px;
+      }
+
+      .card-title {
+        font-size: 1.5em;
+      }
+    } 
+    /* --- Horizontal Scroll Fix --- */
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Side scroll ko block karne ke liye */
+    position: relative;
+}
+
+/* Sabhi elements ko boundary ke andar rakhne ke liye */
+* {
+    box-sizing: border-box;
+}
+
+/* Bootstrap row ki vajah se aksar scroll aata hai, ise fix karein */
+.row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100%;
+}
+
+.container, .container-fluid {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    overflow: hidden;
+}
+
+/* --- Images Fix --- */
+img {
+    max-width: 100%; /* Image kabhi bhi screen se bahar nahi jayegi */
+    height: auto;
+}
+body {
+    overflow: hidden; /* Vertical aur Horizontal dono scrollbars gayab ho jayenge */
+}
+/* Chrome, Safari aur Opera ke liye */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Firefox, IE aur Edge ke liye */
+.no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+/* Laptop/Desktop ke liye default style */
+body {
+    background-color: white;
+}
+
+/* Jab screen 768px se choti ho (Tablets/Phones) */
+@media (max-width: 768px) {
+    body {
+        background-color: lightblue;
+    }
+    .container {
+        flex-direction: column; /* Items ko upar-neeche kar do */
+    }
+}
+.parent {
+    display: flex;
+    flex-wrap: wrap; /* Ye items ko agli line mein bhej dega agar jagah kam hui */
+}
+</style>
+ 
+  <body>
+
+        <header class="site-header">
+    <div class="announcement-bar">
+        <span>“Gear Up—Limited-Time Discount + Free Shipping!”</span>
+        <i class="fa fa-hourglass-2"></i>
+    </div>
+
+    <nav class="main-navbar">
+        <div class="nav-container">
+            <div class="logo-box">
+                <a href="index.html">
+                    <img src="images/web logo.png" alt="Wilson">
+                </a>
+            </div>
+
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="burger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <ul class="nav-links">
+                <li><a href="index.html" class="active-link">Home</a></li>
+
+                <li><a href="sports.html">Sports </a>
+                    
+
+                <li class="has-dropdown">
+                    <a href="nike.html">Category <i class="fa fa-caret-down"></i></a>
+                    <ul class="sub-menu">
+                        <li><a href="champion.html">Men</a></li>
+                        <li><a href="nike.html">Women</a></li>
+                        <li><a href="addidas.html">New Arrivals</a></li>
+                        <li><a href="index.html">NEW TO WILSON</a></li>
+                    </ul>
+                </li>
+
+                <li class="has-dropdown">
+                    <a href="addidas.html">Brands <i class="fa fa-caret-down"></i></a>
+                    <ul class="sub-menu">
+                        
+                        <li><a href="champion.html">Champion</a></li>
+                        <li><a href="nike.html">Nike</a></li>
+                        <li><a href="addidas.html">Adidas</a></li>
+                        <li><a href="puma.html">Puma</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="contact us.html">Contact Us</a></li>
+                <li><a href="login.html">Log in</a></li>
+
+                <li class="mobile-icons">
+                    <a href="login.html"><i class="fa fa-shopping-cart"></i></a>
+                    <a href="#"><i class="fa fa-map-marker"></i></a>
+                </li>
+            </ul>
+
+            <div class="desktop-icons">
+                <a href="login.html"><i class="fa fa-shopping-cart"></i></a>
+                <a href="#"><i class="fa fa-map-marker"></i></a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+    <main>
+  <section class="contact-hero">
+    <div class="container-contact">
+      <img src="images/contact5.jpg" alt="Contact Us" />
+      <h1>Help Center and Contact Us</h1>
+    </div>
+  </section>
+
+  <section class="update-section">
+    <div class="container-update">
+      <h1>Update:</h1>
+      <p>
+        Our team is currently experiencing a delay in processing returns -
+        you should expect to see a refund for your return within 14 days
+        after we receive your item(s) at our warehouse.
+      </p>
+    </div>
+  </section>
+
+  <section class="quick-links">
+    <div class="container-icons">
+      <div class="icon-card">
+        <img src="images/order.webp" alt="Order">
+        <h1>Order Status</h1>
+      </div>
+      <div class="icon-card">
+        <img src="images/return.webp" alt="Return">
+        <h1>Start a Return</h1>
+      </div>
+      <div class="icon-card">
+        <img src="images/warranty.webp" alt="Warranty">
+        <h1>Limited Warranty</h1>
+      </div>
+      <div class="icon-card">
+        <img src="images/balance.webp" alt="Balance">
+        <h1>Gift Card Balance</h1>
+      </div>
+    </div>
+  </section>
+
+  <section class="help-channels">
+    <div class="container-help">
+      <h1>How can we help:</h1>
+    </div>
+    <div class="container-help-center">
+      <div class="help-card">
+        <img src="images/chat.webp" alt="Chat">
+        <h1>Chat</h1>
+        <p>Get instant help from our team.</p>
+      </div>
+      <div class="help-card">
+        <img src="images/email.webp" alt="Email">
+        <h1>Email</h1>
+        <p>Response within 24 hours.</p>
+      </div>
+      <div class="help-card">
+        <img src="images/call.webp" alt="Call">
+        <h1>Call</h1>
+        <p>Our hours are 9:00 AM – 5:00 PM CST, .</p>
+      </div>
+    </div>
+  </section>
+</main>
+    <footer class="custom-footer">
+            <div class="footer-top">
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Check Order Status</a></li>
+                        <li><a href="#">Start a Return</a></li>
+                        <li><a href="#">Warranty Request</a></li>
+                        <li><a href="#">Gift Card Balance</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick links</h4>
+                    <ul>
+                        <li><a href="#">Wilson</a></li>
+                        <li><a href="#">contactus</a></li>
+                        <li><a href="#">login</a></li>
+                        <li><a href="#">menu</a></li>
+                        <li><a href="#">sports</a></li>
+                        <li><a href="#">deal</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Promotions & Discounts</h4>
+                    <ul>
+                        <li><a href="#">First Responders Discount</a></li>
+                        <li><a href="#">Military Discount</a></li>
+                        <li><a href="#">Healthcare Discount</a></li>
+                        <li><a href="#">Tax Exempt</a></li>
+                        <li><a href="#">Tennis Junior Program</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section help-section">
+                    <h4>Need Help?</h4>
+                    <input type="text" placeholder="Name" />
+                    <input type="text" placeholder="Email" />
+                </div>
+            </div>
+
+            <div class="footer-bottom-bar">
+                <div class="footer-links-wrapper">
+                    <div class="footer-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Sale</a>
+                        <a href="#">CA Transparency</a>
+                        <a href="#">Cookies</a>
+                        <a href="#">Cookies Settings</a>
+                        <a href="#">Do Not Sell My Info</a>
+                    </div>
+                    <p>&copy; 2025 Wilson Sporting Goods. All rights reserved.</p>
+                </div>
+
+                <div class="footer-social">
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-youtube"></i>
+                </div>
+            </div>
+
+        </footer>
+  </body>
+</html>

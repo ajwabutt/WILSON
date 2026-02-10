@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Champion</title>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+
+   
+    <style>
+        /* Ye code saare background colors ko remove kar dega */
+body, .img-container, .picture-background {
+    background-color: transparent !important;
+    background: none !important;
+}
+.img-container {
+    width: 100%;
+    background-color: white; /* Blue ki jagah white */
+    overflow: hidden;
+}
+
+.video-background, .picture-background {
+    width: 100%;
+    height: auto; /* Height auto rakhein taaki image ke hisaab se adjust ho */
+    background: transparent !important;
+}
+
+.picture-background img {
+    width: 100%;
+    height: auto; /* Image ki asli ratio barkaraar rahegi */
+    display: block;
+}
+      body {
+        font-family: 'Montserrat', sans-serif;
+      }
+      
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .img-container {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .picture-background {
+            position: relative;
+            width: 100%;
+            height: 80vh; /* Desktop par screen ki 80% height lega */
+            background-color: #f0f0f0;
+        }
+
+        .picture-background img {
+            width: 100%;
+            height: 100%;
+            /* Object-fit image ko stretch hone se bachata hai */
+            object-fit: cover; 
+            display: block;
+        }
+
+        /* Mobile Responsive Settings */
+        @media (max-width: 768px) {
+            .picture-background {
+                height: 50vh; /* Mobile par height thodi kam ho jayegi */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .picture-background {
+                height: 300px; /* Chote phones ke liye fixed height */
+            }
+        }
+        /* Sabse powerful fix gap hatane ke liye */
+div[class*="container"], div[class*="background"] {
+    background-color: white !important; /* Sky blue ko white kar dega */
+}
+
+.picture-background, .img-container {
+    height: auto !important;
+}
+    </style>
+    
+
+  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+          crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+    <body>
+         <header class="site-header">
+    <div class="announcement-bar">
+        <span>“Gear Up—Limited-Time Discount + Free Shipping!”</span>
+        <i class="fa fa-hourglass-2"></i>
+    </div>
+
+    <nav class="main-navbar">
+        <div class="nav-container">
+            <div class="logo-box">
+                <a href="index.html">
+                    <img src="images/web logo.png" alt="Wilson">
+                </a>
+            </div>
+
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="burger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <ul class="nav-links">
+                <li><a href="index.html" class="active-link">Home</a></li>
+
+                
+                    <a href="sports.html">Sports </a>
+                 
+
+                <li class="has-dropdown">
+                    <a href="nike.html">Category <i class="fa fa-caret-down"></i></a>
+                    <ul class="sub-menu">
+                        <li><a href="champion.html">Men</a></li>
+                        <li><a href="nike.html">Women</a></li>
+                        <li><a href="addidas.html">New Arrivals</a></li>
+                        
+                    </ul>
+                </li>
+
+                <li class="has-dropdown">
+                    <a href="addidas.html">Brands <i class="fa fa-caret-down"></i></a>
+                    <ul class="sub-menu">
+                
+                        <li><a href="champion.html">Champion</a></li>
+                        <li><a href="nike.html">Nike</a></li>
+                        <li><a href="addidas.html">Adidas</a></li>
+                        
+                    </ul>
+                </li>
+
+                <li><a href="contact us.html">Contact Us</a></li>
+                <li><a href="login.html">Log in</a></li>
+
+                <li class="mobile-icons">
+                    <a href="login.html"><i class="fa fa-shopping-cart"></i></a>
+                    <a href="#"><i class="fa fa-map-marker"></i></a>
+                </li>
+            </ul>
+
+            <div class="desktop-icons">
+                <a href="login.html"><i class="fa fa-shopping-cart"></i></a>
+                <a href="#"><i class="fa fa-map-marker"></i></a>
+            </div>
+        </div>
+    </nav>
+</header>
+        <main>
+           <section class="section hero">
+            <div class="container mt-35 mb-35">
+              <div class="row">
+                <h1 id="heading">
+                  <p class="text-center">CHAMPION PRODUCTS</p>
+                  </h1>
+                <h5 class="para"><center>Explore CHAMPION collection designed for exclusively for tenis, football and everyday wear.
+                Designed by our engineers for extreme durability comfort level and your daily outcome.</center></h5>
+              </div>
+            </div>
+           </section> 
+<div class="img-container">
+        <div class="picture-background">
+            <img src="Images/champion.webp" alt="Background Image">
+        </div>
+    </div> 
+        
+<main>
+    <h1 class="text-center mt-35 mb-35">MEN SHOE'S</h1>
+    <div class="container-fluid py-4">
+        <div id="champion-men-shoes" class="row g-4 justify-content-center"></div>
+    </div>
+
+    <h1 class="text-center mt-35 mb-35">TRACK SUITS</h1>
+    <div class="container-fluid py-4">
+        <div id="champion-men-suits" class="row g-4 justify-content-center"></div>
+    </div>
+
+    <h1 class="text-center mt-35 mb-35">WOMEN SHOE'S</h1>
+    <div class="container-fluid py-4">
+        <div id="champion-women-shoes" class="row g-4 justify-content-center"></div>
+    </div>
+
+    <h1 class="text-center mt-35 mb-35">WOMEN TRACK SUITS</h1>
+    <div class="container-fluid py-4">
+        <div id="champion-women-suits" class="row g-4 justify-content-center"></div>
+    </div>
+</main>
+
+<script>
+const championData = {
+    "champion-men-shoes": [
+        { brand: "Rush Pro 4.5", title: "Tennis Shoes", desc: "High-performance tennis shoes designed for support and stability.", img: "Images/champion shoes1.webp", link: "championmenshoes.html" },
+        { brand: "Rush Pro 4.5", title: "Pickle ball shoes", desc: "Designed for responsiveness and high-intensity movement.", img: "Images/champion shoes2.webp", link: "championmenshoes1.html" },
+        { brand: "Rush Pro 4.5", title: "Paddle shoes", desc: "Stable and durable shoes for court-side performance.", img: "Images/champion shoes3.webp", link: "championmenshoes2.html" }
+    ],
+    "champion-men-suits": [
+        { brand: "Rush Pro 4.5", title: "Away bold tracksuit", desc: "Best comfort with a design focused on stability.", img: "Images/championmensuit.webp", link: "championsuit.html" },
+        { brand: "Rush Pro 4.5", title: "Exclusive trackSuit", desc: "Premium performance wear for professional athletes.", img: "Images/championmensuit 1.webp", link: "championsuit1.html" },
+        { brand: "Rush Pro 4.5", title: "Hinge tracksuit", desc: "Engineered for maximum flexibility and responsiveness.", img: "Images/championmensuit 2.webp", link: "championsuit2.html" }
+    ],
+    "champion-women-shoes": [
+        { brand: "Rush Pro 4.5", title: "Airway fly Shoes", desc: "Lightweight design for maximum speed and support.", img: "Images/championshoes.webp", link: "championwomenshoes.html" },
+        { brand: "Rush Pro 4.5", title: "away mixed shoe", desc: "Versatile performance shoes for all-day comfort.", img: "Images/championshoes1.webp", link: "championwomenshoes1.html" },
+        { brand: "Rush Pro 4.5", title: "Desirable shoes", desc: "Stylish and functional tennis shoes for women.", img: "Images/championshoes2.webp", link: "championwomenshoes2.html" }
+    ],
+    "champion-women-suits": [
+        { brand: "Rush Pro 4.5", title: "Stappable Women Suit", desc: "Optimized for support, stability and responsiveness.", img: "Images/championwomensuits.webp", link: "championwomensuit.html" },
+        { brand: "Rush Pro 4.5", title: "Charm Women Suit", desc: "Elegant and comfortable fit for active lifestyles.", img: "Images/championwomensuits1.webp", link: "championwomensuit1.html" },
+        { brand: "Rush Pro 4.5", title: "Most Awaited Women suit", desc: "The ultimate blend of performance and style.", img: "Images/championwomensuits2.webp", link: "championwomensuit2.html" }
+    ]
+};
+
+function renderChampionProducts() {
+    for (let id in championData) {
+        const container = document.getElementById(id);
+        if (container) {
+            container.innerHTML = championData[id].map(item => `
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="card h-100 text-center border-0 shadow-sm">
+                        <img src="${item.img}" class="card-img-top" alt="${item.title}">
+                        <div class="card-body d-flex flex-column">
+                            <h6 class="text-muted">${item.brand}</h6>
+                            <h5 class="card-title">${item.title}</h5>
+                            <p class="card-text">${item.desc}</p>
+                            <div class="mt-auto">
+                                <a href="${item.link}" class="btn btn-dark" style="padding: 5px 40px; font-size: 20px;">view</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+    }
+}
+
+// Run on page load
+window.addEventListener('DOMContentLoaded', renderChampionProducts);
+</script>
+           
+
+     <footer class="custom-footer">
+            <div class="footer-top">
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Check Order Status</a></li>
+                        <li><a href="#">Start a Return</a></li>
+                        <li><a href="#">Warranty Request</a></li>
+                        <li><a href="#">Gift Card Balance</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick links</h4>
+                    <ul>
+                        <li><a href="#">Wilson</a></li>
+                        <li><a href="#">contactus</a></li>
+                        <li><a href="#">login</a></li>
+                        <li><a href="#">menu</a></li>
+                        <li><a href="#">sports</a></li>
+                        <li><a href="#">deal</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Promotions & Discounts</h4>
+                    <ul>
+                        <li><a href="#">First Responders Discount</a></li>
+                        <li><a href="#">Military Discount</a></li>
+                        <li><a href="#">Healthcare Discount</a></li>
+                        <li><a href="#">Tax Exempt</a></li>
+                        <li><a href="#">Tennis Junior Program</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section help-section">
+                    <h4>Need Help?</h4>
+                    <input type="text" placeholder="Name" />
+                    <input type="text" placeholder="Email" />
+                </div>
+            </div>
+
+            <div class="footer-bottom-bar">
+                <div class="footer-links-wrapper">
+                    <div class="footer-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Sale</a>
+                        <a href="#">CA Transparency</a>
+                        <a href="#">Cookies</a>
+                        <a href="#">Cookies Settings</a>
+                        <a href="#">Do Not Sell My Info</a>
+                    </div>
+                    <p>&copy; 2025 Wilson Sporting Goods. All rights reserved.</p>
+                </div>
+
+                <div class="footer-social">
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-youtube"></i>
+                </div>
+            </div>
+
+        </footer>
+        <!-- Bootstrap JavaScript Libraries -->
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>
